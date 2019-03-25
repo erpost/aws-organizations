@@ -16,7 +16,7 @@ def get_accounts(profile):
 
 
 if __name__ == '__main__':
-    accounts = get_accounts('jau-org-admin')
+    accounts = get_accounts('org-readonly')
     account_num = 1
     for account in accounts['Accounts']:
         print('Account: {}'.format(account_num))
