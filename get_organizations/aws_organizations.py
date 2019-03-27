@@ -2,8 +2,13 @@ import boto3
 import os
 
 
-os.environ['AWS_SHARED_CREDENTIALS_FILE'] = os.path.expanduser('.aws/credentials')
-os.environ['AWS_CONFIG_FILE'] = os.path.expanduser('.aws/config')
+credentials = os.path.expanduser('.aws/credentials')
+config = os.path.expanduser('.aws/config')
+
+if os.path.isfile(credentials):
+    os.environ['AWS_SHARED_CREDENTIALS_FILE'] = credentials
+if os.path.isfile(config):
+    os.environ['AWS_CONFIG_FILE'] = config
 
 
 def get_accounts(profile):
