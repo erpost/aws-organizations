@@ -26,4 +26,4 @@ def get_organization_accounts(event, context):
 
 
 if __name__ == '__main__':
-    accounts = get_organization_accounts(None, None)
+    get_organization_accounts(None, None)
